@@ -1,0 +1,41 @@
+CREATE TABLE `salary` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT,
+  `baseSalary` DECIMAL(38,2) DEFAULT NULL,
+  `effectiveDate` DATE DEFAULT NULL,
+  `payPeriod` VARCHAR(255) DEFAULT NULL,
+  `employeeId` BIGINT NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK8rp6t653vbme3rnld21dyyh1f` (`employeeId`),
+  CONSTRAINT `FK8rp6t653vbme3rnld21dyyh1f` FOREIGN KEY (`employeeId`) REFERENCES `employee` (`id`)
+);
+
+INSERT INTO `salary` (`id`, `baseSalary`, `effectiveDate`, `payPeriod`, `employeeId`)
+VALUES
+(1, 75000.00, '2024-01-01', 'monthly', 1),
+(2, 85000.00, '2024-01-01', 'monthly', 2),
+(3, 65000.00, '2024-01-01', 'monthly', 3),
+(4, 72000.00, '2024-01-01', 'monthly', 4),
+(5, 70000.00, '2024-01-01', 'monthly', 5),
+(6, 78000.00, '2024-01-01', 'monthly', 6),
+(7, 73000.00, '2024-01-01', 'monthly', 7),
+(8, 62000.00, '2024-01-01', 'monthly', 8),
+(9, 80000.00, '2024-01-01', 'monthly', 9),
+(10, 90000.00, '2024-01-01', 'monthly', 10),
+(11, 85000.00, '2024-01-01', 'monthly', 11),
+(12, 74000.00, '2024-01-01', 'monthly', 12),
+(13, 67000.00, '2024-01-01', 'monthly', 13),
+(14, 69000.00, '2024-01-01', 'monthly', 14),
+(15, 64000.00, '2024-01-01', 'monthly', 15),
+(16, 63000.00, '2024-01-01', 'monthly', 16),
+(17, 71000.00, '2024-01-01', 'monthly', 17),
+(18, 66000.00, '2024-01-01', 'monthly', 18),
+(19, 67000.00, '2024-01-01', 'monthly', 19),
+(20, 90000.00, '2024-01-01', 'monthly', 20),
+(21, 75000.00, '2024-01-01', 'monthly', 21),
+(22, 66000.00, '2024-01-01', 'monthly', 22),
+(23, 70000.00, '2024-01-01', 'monthly', 23),
+(24, 85000.00, '2024-01-01', 'monthly', 24),
+(25, 68000.00, '2024-01-01', 'monthly', 25),
+(26, 95000.00, '2024-01-01', 'monthly', 26),
+(27, 80000.00, '2024-01-01', 'monthly', 27),
+(28, 72000.00, '2024-01-01', 'monthly', 28);
