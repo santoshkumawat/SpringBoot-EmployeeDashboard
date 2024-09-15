@@ -1,18 +1,3 @@
-CREATE TABLE `employee` (
-  `id` BIGINT NOT NULL AUTO_INCREMENT,
-  `departmentId` INT DEFAULT NULL,
-  `email` VARCHAR(255) DEFAULT NULL,
-  `firstName` VARCHAR(255) DEFAULT NULL,
-  `hireDate` DATE DEFAULT NULL,
-  `jobTitle` VARCHAR(255) DEFAULT NULL,
-  `lastName` VARCHAR(255) DEFAULT NULL,
-  `managerId` INT DEFAULT NULL,
-  `phoneNumber` VARCHAR(255) DEFAULT NULL,
-  `salary` DECIMAL(38,2) DEFAULT NULL,
-  `status` VARCHAR(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-);
-
 INSERT INTO `employee` (`id`, `departmentId`, `email`, `firstName`, `hireDate`, `jobTitle`, `lastName`, `managerId`, `phoneNumber`, `salary`, `status`)
 VALUES
 (1, 1, 'john.doe@example.com', 'John', '2020-01-15', 'Software Engineer', 'Doe', NULL, '555-1234', 75000.00, 'Active'),

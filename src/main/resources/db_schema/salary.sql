@@ -1,14 +1,3 @@
-CREATE TABLE `salary` (
-  `id` BIGINT NOT NULL AUTO_INCREMENT,
-  `baseSalary` DECIMAL(38,2) DEFAULT NULL,
-  `effectiveDate` DATE DEFAULT NULL,
-  `payPeriod` VARCHAR(255) DEFAULT NULL,
-  `employeeId` BIGINT NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK8rp6t653vbme3rnld21dyyh1f` (`employeeId`),
-  CONSTRAINT `FK8rp6t653vbme3rnld21dyyh1f` FOREIGN KEY (`employeeId`) REFERENCES `employee` (`id`)
-);
-
 INSERT INTO `salary` (`id`, `baseSalary`, `effectiveDate`, `payPeriod`, `employeeId`)
 VALUES
 (1, 75000.00, '2024-01-01', 'monthly', 1),
